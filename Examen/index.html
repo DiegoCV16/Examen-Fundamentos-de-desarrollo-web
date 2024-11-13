@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Lista de Tareas</h1>
+    <input type="text" id="taskInput" placeholder="Escribe una tarea...">
+    <select id="prioritySelect">
+        <option value="Alta">Alta</option>
+        <option value="Media">Media</option>
+        <option value="Baja">Baja</option>
+    </select>
+    <button onclick="addTask()">Agregar Tarea</button>
+
+    <ul id="taskList" class="task-list"></ul>
+</div>
+
+<div id="overlay"></div>
+<div id="confirmDialog">
+    <p>¿Estás seguro de que deseas eliminar esta tarea de alta prioridad?</p>
+    <button id="confirmButton" onclick="confirmDelete()">Confirmar</button>
+    <button id="cancelButton" onclick="cancelDelete()">Cancelar</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

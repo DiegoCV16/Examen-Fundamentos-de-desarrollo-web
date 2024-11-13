@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b3b3b3; /* Fondo gris claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #cc0000; 
+    color: #fff;
+    border-radius: 5px;
+}
+
+.task-item button {
+    background-color: #da56a3; /* Rojo oscuro para el botón eliminar */
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.task-item button:hover {
+    background-color: #99008c; /* Rojo aún más oscuro al pasar el mouse */
+}
+
+.add-task {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#confirmDialog {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+#confirmDialog p {
+    color: #333; /* Color de texto del mensaje */
+}
+
+#confirmDialog button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+#confirmButton {
+    background-color: #cc0000; /* Botón Confirmar en rojo */
+    color: #fff;
+}
+
+#cancelButton {
+    background-color: #ccc; /* Botón Cancelar en gris claro */
+    color: #333;
+}
+
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+}
+
+/* Tareas de alta prioridad */
+.high-priority {
+    background-color: #cc0000; /* Rojo oscuro */
+}
+
+/* Tareas de prioridad media */
+.medium-priority {
+    background-color: #f1c40f; /* Amarillo */
+}
+
+/* Tareas de baja prioridad */
+.low-priority {
+    background-color: #2ecc71; /* Verde */
+}
